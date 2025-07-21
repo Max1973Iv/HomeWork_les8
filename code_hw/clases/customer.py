@@ -3,6 +3,6 @@ class Customer:
     def __init__(self, name: str, orders: str):
         self.name = name
         self.orders= orders
-
+#
     def __str__(self):
         return f"клиент (Имя={self.name}, Список заказов={self.orders})"
