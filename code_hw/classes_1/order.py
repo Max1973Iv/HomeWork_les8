@@ -1,4 +1,5 @@
-# класс order представляет заказ с атрибутами products (список товаров в заказе)
+"""класс order представляет заказ с атрибутами products (список товаров в заказе)
+""""
 class Order:
     def __init__(self, products):
         self.products = products
