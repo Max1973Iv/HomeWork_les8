@@ -1,6 +1,7 @@
 #начало
 #создать систему для интернет магазина
 import sys
+from datetime import datetime
 from classes_1.product import Product
 from classes_1.order import Order
 from classes_1.discount import Discount
@@ -56,7 +57,6 @@ print(f'Цена со скидкой "{discount_10_season.description}" для {
 print(f'Цена со скидкой "{discount_10_season.description}" для {product2.name}: {discounted_price_product2}')
 print(f'Цена со скидкой "{discount_10_season.description}" для {product3.name}: {discounted_price_product3}\n\n')
 #
-#
 # выводим общее количество заказов
 print(f'Всего заказов: {Order.sum_total_orders([order1, order2])}\n\n')
 # выводим общую стоимость всех заказов без учета скидок
@@ -64,3 +64,7 @@ print(f'Общая стоимость всех заказов без учета 
 # выводим общую стоимость всех заказов с учетом скидок
 total_discounted_price = discounted_price_order1 + discounted_price_order2
 print(f'Общая стоимость всех заказов с учетом скидок: {total_discounted_price}\n\n')
+# время и дата выполнения программы
+from datetime import datetime
+print(f'Время и дата выполнения программы: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n\n')
+# конец
