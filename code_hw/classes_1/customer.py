@@ -8,4 +8,4 @@ class Customer:
         self.orders= orders
 #
     def __str__(self):
-        return f"клиент (Имя={self.name}, Список заказов={self.orders})"
+        return f"клиент (Имя: {self.name}, Список заказов: {self.orders})"

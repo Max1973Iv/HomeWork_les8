@@ -4,14 +4,15 @@ discount_percent (процент скидки) и description (описание 
 метод __str__ возвращает строковое представление объекта для удобного вывода
 статический метод позволяет рассчитать цену со скидкой для различных видов скидок"""
 class Discount:
-    def __init__(self, discount_percent, description):
+    def __init__(self, discount_percent:int, description:str) -> None:
+#
         self.discount_percent = discount_percent  # процент скидки
         self.description = description  # описание скидки
 #
     def __str__(self):
         return f"Discount: {self.discount_percent}%, Description: {self.description}"  # строковое представление объекта
-#    @staticmethod
-    def calculate_discounted_price(original_price, discount_percent):
+    @staticmethod
+    def calculate_discounted_price(original_price:int, discount_percent:int) -> float:
         """Статический метод для расчета цены со скидкой"""
         if discount_percent < 0 or discount_percent > 100:
             raise ValueError("Discount percent must be between 0 and 100")
