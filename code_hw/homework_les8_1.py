@@ -1,6 +1,9 @@
 #начало
 #создать систему для интернет магазина
 #
-from classes.product import Product
-from classes.order import Order
-# Пример использования классов Product и Order в интернет-магазине
+from classes_1.product import Product
+from classes_1.order import Order
+from classes_1.discount import Discount
+from classes_1.customer import Customer
+#
+
