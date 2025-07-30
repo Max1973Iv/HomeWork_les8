@@ -5,7 +5,12 @@
 class Customer:
     def __init__(self, name: str, orders: str):
         self.name = name
-        self.orders= orders
+        self.orders= []#инициализ как пустой список
+    def add_order(self, order):
+        """
+        Метод add_order для добавления нового заказа в список заказов.
+        """
+        self.orders.append(order)
 #
     def __str__(self):
         return f"клиент (Имя: {self.name}, Список заказов: {self.orders})"
