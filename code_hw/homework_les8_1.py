@@ -28,8 +28,8 @@ discounted_price_product3 = Discount.calculate_discounted_price(product3.price, 
 order1 = Order([product1, product2])  # заказ с двумя продуктами
 # расчитываем стоимость первого заказа с учетом скидки discount_10_season
 discounted_price_order1 = sum(product.price for product in order1.products) * (1 - discount_10_season.discount_percent / 100)
-# привязываем заказ к клиенту
-customer1.orders = order1
+# привязываем заказ к клиенту -добавляем заказ в список заказов клиента
+customer1.add_order(order1)
 # выводим информацию о клиенте и заказе
 print(f'{customer1} Стоимость:{sum(product.price for product in order1.products)} \nОбщая стоимость заказа со скидкой "{discount_10_season.description}" : {discounted_price_order1}')  # вывод информации о заказе
 # рассчитыавем стоимость первого заказа с оптовой скидкой (если сумма заказа с учетом скидки discount_10_season больше 100)
@@ -41,8 +41,8 @@ if discounted_price_order1 > 100:
 order2 = Order([product3])  # заказ с одним продуктом
 # расчитываем стоимость второго заказа с учетом скидки discount_10_season
 discounted_price_order2 = sum(product.price for product in order2.products) * (1 - discount_10_season.discount_percent / 100)
-# привязываем заказ ко второму клиенту
-customer2.orders = order2
+# привязываем заказ ко второму клиенту - добавляем заказ в список заказов клиента
+customer2.add_order(order2)
 # выводим информацию о втором клиенте и заказе
 print(f'{customer2} Стоимость:{sum(product.price for product in order2.products)} \nОбщая стоимость заказа со скидкой "{discount_10_season.description}" : {discounted_price_order2}')  # вывод информации о заказе
 # рассчитыавем стоимость второго заказа с оптовой скидкой (если сумма заказа с учетом скидки discount_10_season больше 100)
