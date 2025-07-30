@@ -15,6 +15,4 @@ class Customer:
     def __str__(self):
         orders_str = ', '.join(str(order) for order in self.orders)
         return f"клиент (Имя: {self.name}, Список заказов: {orders_str})"
-#
-#    def __str__(self):
-#       return f"клиент (Имя: {self.name}, Список заказов: {self.orders})"
+    #

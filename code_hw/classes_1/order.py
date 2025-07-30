@@ -4,13 +4,14 @@
 метод класса sum_total_orders возвращает общее количество заказов
 метод класса cash_total_orders возвращает общую стоимость всех заказов"""
 class Order:
-    def __init__(self, products: list, nomber: int = 0):
-        """
-        Инициализация заказа списком товаров.
-        """
+    __nom = 1  # начальное значение номера заказа
+#
+    def __init__(self, products: list, nomber: int=0):# Инициализация заказа списком товаров.
         self.products = products
-        self.nomber = nomber
-        self.nomber += 1  # увеличиваем номер заказа при каждом новом заказе
+        if nomber == 0:  # если номер заказа не указан, присваиваем следующий номер
+            nomber = Order.__nom
+        Order.__nom += 1  # увеличиваем номер заказа при каждом новом заказе    
+        self.nomber = nomber  # номер заказа присвоен при создании объекта
 #
     def __str__(self):
         return f"Список {len(self.products)} товаров в заказе номер {(self.nomber)}: {', '.join(str(product) for product in self.products)}"
