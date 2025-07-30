@@ -13,9 +13,9 @@ product1 = Product("Ноутбук", 130)
 product2 = Product("Смартфон", 50)
 product3 = Product("Телевизор", 80)
 # создаем клиентов
-customer1 = Customer("Иван Иванов", "")
-customer2 = Customer("Петр Петров", "")
-customer3 = Customer("Сидор Сидоров", "")
+customer1 = Customer("Иван Иванов","")
+customer2 = Customer("Петр Петров","")
+customer3 = Customer("Сидор Сидоров","")
 # создаем скидки
 discount_10_season = Discount(10, "Скидка 10% на все товары сезонная")
 discount_2_over100 = Discount(2, "Скидка 2% на товары в заказе с общей суммой заказа более 100")
